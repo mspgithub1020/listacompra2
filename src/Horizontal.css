@@ -1,0 +1,9 @@
+.Horizontal-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+.Horizontal-content h1{
+    color: aqua;
+}
