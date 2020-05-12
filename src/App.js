@@ -52,7 +52,7 @@ function App() {
   return (
     <React.StrictMode>
 
-      <Saludo name='Juan'></Saludo>
+      <Saludo name='Juan' />
       <Horizontal>
         <h1>primero</h1>
         <h1>segundo</h1>
