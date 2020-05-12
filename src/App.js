@@ -6,6 +6,8 @@ import InitialStateComponent from './InitialStateComponent'
 import UpdateStateComponent from './UpdateStateComponent'
 import Padre1Component from './Padre1Component'
 import Counter from './Counter'
+import HijoPadre from './Hijo-Padre'
+import PadreHIjo from './Padre-Hijo'
 
 //1
 function Saludo(props){
@@ -58,10 +60,13 @@ function App() {
       <PropsRender header={Header} content={Content} footer={Footer}></PropsRender>
       <EventComponent/>
       <InitialStateComponent/>
-      <UpdateStateComponent/>
-      <h4>padre</h4>
-      <Padre1Component/>
-      <h4>padre</h4>
+      <UpdateStateComponent/>      
+      <Padre1Component/> 
+      <h5>Hijo-Padre</h5>     
+      <HijoPadre/>
+      <h5>Padre-Hijo</h5>
+      <PadreHIjo/>
+      <h5>Mediator</h5>
       <Counter/>
 
     </React.StrictMode>

@@ -5,7 +5,7 @@ function Hijo(props) {
     return <button onClick={props.update}>Click</button>
 }
 
-class Padre extends React.Component {
+class HijoPadre extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -27,9 +27,13 @@ class Padre extends React.Component {
     }
 }
 
+export default HijoPadre;
+
+/*
 ReactDOM.render(
     <React.StrictMode>
         <Padre></Padre>
     </React.StrictMode>,
     document.getElementById('root')
 );
+*/
