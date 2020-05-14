@@ -8,6 +8,12 @@ import Padre1Component from './Padre1Component'
 import Counter from './Counter'
 import HijoPadre from './Hijo-Padre'
 import PadreHIjo from './Padre-Hijo'
+import RefsComponents from './RefsComponents'
+import ControlledComponent from './ControlledComponent'
+import FetchComponent from './FetchComponent'
+
+//import CycleLifeComponent from './CycleLifeComponent'
+
 
 //1
 function Saludo(props){
@@ -68,6 +74,17 @@ function App() {
       <PadreHIjo/>
       <h5>Mediator</h5>
       <Counter/>
+      <h5>REFS COMPONENT</h5>
+
+      <RefsComponents/>
+      
+      <h5>CONTROLLED COMPONENT</h5>
+
+      <ControlledComponent/>
+
+      <h5>FETCH</h5>
+
+      <FetchComponent/>
 
     </React.StrictMode>
   );
