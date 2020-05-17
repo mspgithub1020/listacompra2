@@ -1,9 +1,10 @@
 .Horizontal-content{
+    margin-top: 15rem;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
 
 }
 .Horizontal-content h1{
-    color: aqua;
+    color: rgb(246, 199, 11);
 }

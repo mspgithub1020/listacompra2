@@ -1,6 +1,23 @@
 import React from 'react';
+
+
+function Header(){
+    return (
+      <div className='Header'><h1>Header</h1></div>
+    );
+  }
+function Content(){
+    return (
+      <div className='Content'><h1>Content</h1></div>
+    );
+  }
+function Footer(){
+    return (
+      <div className='Footer'><h1>Footer</h1></div>
+    );
+  }
  
-function PropsRender (props) { 
+function PropsRenderComponent (props) { 
     
     return(
         <div>
@@ -14,6 +31,15 @@ function PropsRender (props) {
                 {props.footer()}
             </div>
         </div>
+    )
+}
+
+function PropsRender (props) { 
+    
+    return (
+      <div className="PropsRender-div">
+         <PropsRenderComponent header={Header} content={Content} footer={Footer} ></PropsRenderComponent>
+      </div>
     )
 }
 

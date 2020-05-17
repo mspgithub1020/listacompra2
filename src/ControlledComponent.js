@@ -17,7 +17,7 @@ class ControlledComponent extends Component {
   
   render() {
     return (
-      <div>
+      <div className="Controlled-div">
         <label htmlFor="control">Control</label>
         <input type="text" id="control" value={this.state.value} onChange={this._updateInput}/>
       </div>

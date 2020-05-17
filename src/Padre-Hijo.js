@@ -5,7 +5,7 @@ function Hijo(props) {
     return <h1>{props.count}</h1>
 }
 
-class PadreHIjo extends React.Component {
+class PadreHijo extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -20,7 +20,7 @@ class PadreHIjo extends React.Component {
     }
 }
 
-export default PadreHIjo;
+export default PadreHijo;
 
 /*
 ReactDOM.render(

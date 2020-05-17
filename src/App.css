@@ -1,0 +1,93 @@
+
+ul{
+    
+    list-style: none;
+    line-height: 42px;
+    /*outline: 1px solid red;*/
+    padding-left: 0;
+    width: 20em;
+    margin: 2em;
+
+}
+
+.a{
+
+    color: #ddd;
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+ul li{
+
+    /*border-left: 3px solid rgba(255,255,255,.2);*/
+    box-shadow: 3px 0 rgba(255,255,255,.2) inset;
+    /*box-shadow: -90px 0 rgba(255,255,255,.2);*/
+    padding-left: 1.5em;
+    margin-bottom: 5px;
+    /*outline: 1px solid white;*/
+    --webkit-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+
+}
+
+ul li:hover{
+
+    box-shadow: 20em 0 rgba(255,255,255,.2) inset;
+
+
+}
+
+.a:hover{
+
+    color: rgb(246, 199, 11);
+    
+}
+
+.Home-div{
+    color: rgb(246, 199, 11);
+    margin-top: 15rem;
+    text-align: center;
+}
+
+.Saludo-div{
+    color: rgb(246, 199, 11);
+    margin-top: 15rem;
+    text-align: center;}
+
+
+.Controlled-div{
+    margin-top: 15rem;
+    display: grid;
+    grid-template-columns: 50px 200px;
+    Column-Gap: 20px ; 
+    justify-content: center;
+}
+
+.PropsRender-div{
+    margin-top: 15rem;
+    color: rgb(246, 199, 11);
+    display: grid;
+    grid-template-rows: 100px 100px;
+    row-Gap: 20px ; 
+    justify-content: center;  
+}
+
+.Counter-div{
+    margin-top: 15rem;
+    display: grid;
+    grid-template-rows: 100px 100px;
+    row-Gap: 20px ; 
+    justify-content: center;
+}
+
+.Fetch-div{
+    margin-top: 15rem;
+    color: rgb(246, 199, 11);
+    display: grid;
+    grid-template-rows: 200px 200px;
+    row-Gap: 20px ; 
+    justify-content: center;
+}
+

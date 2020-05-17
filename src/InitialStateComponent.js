@@ -9,29 +9,19 @@ State
 
 class InitialStateComponent extends React.Component{
 
-
     constructor(props){
-
         super(props);
-
         this.state = {
-
             foo : 'Hello World'
-
         }
-
     }
 
     render(){
 
         return (
-
             <div><h3>{this.state.foo}</h3></div>
-
         )
-
     }
-
 }
 
 export default InitialStateComponent;

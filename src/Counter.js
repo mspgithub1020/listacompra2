@@ -5,7 +5,6 @@ import Updater from './Updater'
 class Counter extends React.Component{
 
     constructor(props){
-
         super(props);
         this.state = {
             contador : 100
@@ -20,10 +19,10 @@ class Counter extends React.Component{
 
     render(){
         return (
-            <React.Fragment>                
+            <div className="Counter-div">                
                 <Updater update={this._update}/>
                 <Displayer contador={this.state.contador}/>
-            </React.Fragment>
+            </div>
         )
     }
 }

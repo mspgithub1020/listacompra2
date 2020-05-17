@@ -1,64 +1,68 @@
 import React from 'react'
+import {BrowserRouter , Route , Switch, Link} from 'react-router-dom'
+
 import './Horizontal.css'
-import PropsRender from './PropsRender'
-import EventComponent from './EventComponent'
-import InitialStateComponent from './InitialStateComponent'
-import UpdateStateComponent from './UpdateStateComponent'
-import Padre1Component from './Padre1Component'
-import Counter from './Counter'
-import HijoPadre from './Hijo-Padre'
-import PadreHIjo from './Padre-Hijo'
-import RefsComponents from './RefsComponents'
-import ControlledComponent from './ControlledComponent'
-import FetchComponent from './FetchComponent'
+import './App.css'
 
-//import CycleLifeComponent from './CycleLifeComponent'
-
-
-//1
-function Saludo(props){
-  return (
-    <span>>Hola {props.name}</span>
-  );
-}
-
-//2
-function Horizontal(props){
-
-  return(
-    <div className="Horizontal-content">
-      <h1>ELEMENTOS HORIZONTALES</h1>
-            {props.children}
-    </div>
-
-  );
-
-}
-
-//3
-
-function Header(){
-  return (
-    <div className='Header'><h1>header</h1></div>
-  );
-}
-function Content(){
-  return (
-    <div className='Content'><h1>content</h1></div>
-  );
-}
-function Footer(){
-  return (
-    <div className='Footer'><h1>footer</h1></div>
-  );
-}
+const ficheros = ['Home','Saludo','Horizontal','PropsRender','EventComponent','InitialStateComponent','UpdateStateComponent','Padre-Hijo','Hijo-Padre','Counter','RefsComponents','ControlledComponent','FetchComponent','CycleLIfeComponent'];
 
 
 function App() {
   return (
     <React.StrictMode>
 
-      <Saludo name='Juan' />
+      <BrowserRouter>
+
+        <div style={{display:'grid' , gridTemplateColumns:'auto 1fr' , gridColumnGap:'20px'}}>
+          <nav>
+            <ul>
+              {ficheros.map((fichero,i)=>{
+                  return(
+                    <li key={i}>
+                        <Link className="a" to={`/${fichero}`}>{fichero}</Link>
+                    </li>
+                  )
+              })}              
+            </ul>
+          </nav>
+
+          <main>
+            <React.Suspense fallback={<div>Loading .... </div>}>
+              <Switch>
+
+                <Route exact path="/Home" component={React.lazy(()=>import('./Home'))}/>
+                <Route path="/Saludo" component={React.lazy(()=>import('./Saludo'))}/>
+                <Route path="/Horizontal" component={React.lazy(()=>import('./Horizontal'))}/>
+                <Route path="/PropsRender" component={React.lazy(()=>import('./PropsRender'))}/>
+                <Route path="/EventComponent" component={React.lazy(()=>import('./EventComponent'))}/>
+                <Route path="/InitialStateComponent" component={React.lazy(()=>import('./InitialStateComponent'))}/>
+                <Route path="/UpdateStateComponent" component={React.lazy(()=>import('./UpdateStateComponent'))}/>
+                <Route path="/Padre-Hijo" component={React.lazy(()=>import('./Padre-Hijo'))}/>
+                <Route path="/Hijo-Padre" component={React.lazy(()=>import('./Hijo-Padre'))}/>
+                <Route path="/Counter" component={React.lazy(()=>import('./Counter'))}/>
+                <Route path="/RefsComponents" component={React.lazy(()=>import('./RefsComponents'))}/>
+                <Route path="/ControlledComponent" component={React.lazy(()=>import('./ControlledComponent'))}/>
+                <Route path="/FetchComponent" component={React.lazy(()=>import('./FetchComponent'))}/>             
+                
+
+              </Switch>
+            </React.Suspense>
+          </main>
+
+        </div>
+
+      </BrowserRouter>
+      
+    </React.StrictMode>
+  );
+}
+
+export default App;
+
+
+/*
+
+<Saludo name='Juan' />
       <Horizontal>
         <h1>primero</h1>
         <h1>segundo</h1>
@@ -86,8 +90,11 @@ function App() {
 
       <FetchComponent/>
 
-    </React.StrictMode>
-  );
-}
+*/
 
-export default App;
+/*
+<li>            
+    <Link to={{pathname:"/Saludo" , props:{name:"Juan"}}}>Saludo</Link>            
+</li>
+
+*/
